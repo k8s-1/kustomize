@@ -1,3 +1,23 @@
 resources:
 - ./../base
 namePrefix: prod-
+
+namespace: prod
+
+patches:
+- target:
+    kind: Deployment
+    name: deploy
+  patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: deploy
+    spec:
+      template:
+        spec:
+          containers:
+            - name: second-container
+              image: nginx:latest
+              ports:
+                - containerPort: 8080

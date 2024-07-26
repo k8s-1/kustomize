@@ -1,3 +1,6 @@
 resources:
 - ./../base
+
 namePrefix: stag-
+
+namespace: staging
