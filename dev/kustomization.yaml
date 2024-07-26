@@ -1,3 +1,19 @@
 resources:
 - ./../base
-namePrefix: _dev-
+namePrefix: dev-
+
+patches:
+- target:
+    kind: Deployment
+    name: dep.*
+  patch: |-
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: deploy
+    spec:
+      template:
+        spec:
+          containers:
+          - name: nginx
+            image: nginx:latest

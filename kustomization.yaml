@@ -2,4 +2,4 @@ resources:
 - ./dev
 - ./staging
 - ./production
-namePrefix: _cluster-a-
+namePrefix: cluster-a-
