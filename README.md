@@ -10,12 +10,6 @@ kustomize build | kubectl apply -f -
 # docs
 https://kubectl.docs.kubernetes.io/guides/example/multi_base/
 
-# patches
-1. kustomize builds the resources from the kustomize file
-2. kustomize can 'patch' resources
-    - existing values won't be overridden
-    - patching is rather inflexible, not as good as helm for large projects
-
 # Kustomize Cheat Sheet
 
 kustomize is a command line tool supporting template-free, structured customization of declarative configuration targeted to k8s-style objects.
@@ -109,6 +103,13 @@ kustomize create --resources https://github.com/kubernetes-sigs/kustomize.git/ex
 kustomize edit add configmap hello-world --behavior create --from-literal=host=google.com
 kustomize build .
 ```
+
+# patches
+1. kustomize builds the resources from the kustomize file
+2. kustomize can 'patch' resources
+    - existing values won't be overridden
+    - patching is rather inflexible, not as good as helm for large projects
+
 
 ### JSON Patch
 
