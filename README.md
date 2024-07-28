@@ -125,7 +125,6 @@ kustomize build .
 ```
 
 ### Strategic Merge
-
 Add `emptyDir` volume 
 ```bash
 cat <<EOF > patch.yaml
