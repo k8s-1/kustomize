@@ -1,0 +1,7 @@
+resources:
+- ./../base
+- ./namespace.yaml
+
+namePrefix: stag-
+
+namespace: staging
