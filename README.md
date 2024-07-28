@@ -13,8 +13,6 @@ kustomize build | kubectl delete -f - # apply yaml
 kustomize build | kubectl apply -f -
 ```
 
-## general overview
-
 kustomize is a command line tool supporting template-free, structured customization of declarative configuration targeted to k8s-style objects.
 
 Targeted to k8s means that kustomize has some understanding of API resources, k8s concepts like names, labels, namespaces, etc. and the semantics of resource patching.
