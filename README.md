@@ -117,7 +117,7 @@ Update the number of the replicas
 cat <<EOF > patch.yaml
 - op: replace
   path: /spec/replicas
-  value: 1
+  value: 5
 EOF
 kustomize create --resources https://github.com/kubernetes-sigs/kustomize.git/examples/helloWorld\?ref\=v1.0.6
 kustomize edit add patch --kind Deployment --path patch.yaml
