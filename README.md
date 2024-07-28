@@ -1,7 +1,9 @@
-# show yaml
+# basics commands
+
+## show yaml
 kustomize build .
 
-# apply yaml
+## apply yaml
 kustomize build | kubectl delete -f -
 kustomize build | kubectl apply -f -
 
@@ -14,7 +16,7 @@ https://kubectl.docs.kubernetes.io/guides/example/multi_base/
     - existing values won't be overridden
     - patching is rather inflexible, not as good as helm for large projects
 
-# Kustomize Cheat Sheet (CNCF https://github.com/olegsu/cncf-cheat-sheet/blob/main/kustomize.md)
+# Kustomize Cheat Sheet
 
 kustomize is a command line tool supporting template-free, structured customization of declarative configuration targeted to k8s-style objects.
 
