@@ -1,7 +1,7 @@
-# show yaml for current kustomize file
+# show yaml
 kustomize build .
 
-# apply yaml created by kustomize to kubectl
+# apply yaml
 kustomize build | kubectl delete -f -
 kustomize build | kubectl apply -f -
 
