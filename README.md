@@ -7,13 +7,11 @@ https://kubectl.docs.kubernetes.io/guides/example/multi_base/
     - patching is rather inflexible, not as good as helm for large projects
 
 ## example
-
-### show yaml
-kustomize build .
-
-### apply yaml
-kustomize build | kubectl delete -f -
+```sh
+kustomize build . # show yaml
+kustomize build | kubectl delete -f - # apply yaml
 kustomize build | kubectl apply -f -
+```
 
 ## general overview
 
